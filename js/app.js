@@ -14,6 +14,7 @@ createApp({
             : rawData;
         return {
             emails,
+            date: typeof date !== 'undefined' ? date : '',
             toastVisible: false,
             toastMessage: '',
             filterDefcon: null,  // null = show all, 1-5 = filter by level

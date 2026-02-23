@@ -43,6 +43,7 @@
             <div class="system-status">
                 <span class="blink">&gt;</span> SYSTEM ONLINE // {{ Object.keys(filteredEmails).length }} MESSAGES QUEUED
                 <span v-if="filterDefcon !== null"> // FILTER: DEFCON {{ filterDefcon }}</span>
+                <span v-if="date"> // Last checked: {{ date }}</span>
             </div>
         </header>
 

@@ -1,4 +1,4 @@
-const vips = ["ebro","bertelsmann","hlb","tiemann","comspace"]; const mips = ["marketing","support","sales"]; window.emailData = [
+const date = '24.06.86'; const vips = ["ebro","bertelsmann","hlb","tiemann","comspace"]; const mips = ["marketing","support","sales"]; window.emailData = [
     {
         "summary": "Atlassian sendet einen Verifizierungscode zur Identitätsprüfung (0973 6984).",
         "de": "Atlassian fordert Sie als zusätzliche Sicherheitsmaßnahme zur Verifizierung Ihrer Identität auf. Um auf Atlassian zuzugreifen, geben Sie den folgenden Code ein: 0973 6984. Die Nachricht stammt von Atlassian Cloud (noreply-Adresse).",
