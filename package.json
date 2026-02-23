@@ -1,0 +1,41 @@
+{
+  "name": "elephant-boy",
+  "version": "1.0.0",
+  "description": "Email Dashboard with DEFCON-style priority system",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "serve": "npx serve . -p 3000",
+    "monaca:preview": "monaca preview",
+    "monaca:debug": "monaca debug",
+    "monaca:build:ios": "monaca build ios",
+    "monaca:build:android": "monaca build android"
+  },
+  "keywords": [
+    "email",
+    "dashboard",
+    "vue",
+    "monaca",
+    "cordova"
+  ],
+  "author": "Elephant Boy Team",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.0"
+  },
+  "monaca": {
+    "plugin_loader": "cordova"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-clipboard": {}
+    },
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  }
+}

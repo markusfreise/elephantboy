@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: https://unpkg.com https://cdn.jsdelivr.net https://fonts.googleapis.com https://fonts.gstatic.com">
+    <title>ELEPHANT BOY // WOPR EMAIL SYSTEM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div class="scanlines"></div>
+    <div class="crt-overlay"></div>
+
+    <div id="app">
+        <!-- Header with DEFCON indicator -->
+        <header class="header" :class="'defcon-' + highestDefcon">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">&#9619;&#9619;&#9619;</span>
+                    <div class="logo-text">
+                        <h1>ELEPHANT BOY</h1>
+                        <span class="subtitle">WOPR EMAIL DEFENSE SYSTEM v2.0</span>
+                    </div>
+                </div>
+                <div class="defcon-display">
+                    <div class="defcon-label">THREAT LEVEL</div>
+                    <div class="defcon-level">DEFCON {{ highestDefcon }}</div>
+                    <div class="status-indicator" :class="'status-' + highestDefcon"></div>
+                </div>
+            </div>
+            <div class="defcon-bar">
+                <div v-for="level in 5" :key="level"
+                     class="defcon-segment"
+                     :class="['defcon-' + level, { active: level <= highestDefcon, selected: filterDefcon === level }]"
+                     @click="toggleDefconFilter(level)">
+                    <span class="segment-label">{{ level }}</span>
+                </div>
+            </div>
+            <div class="system-status">
+                <span class="blink">&gt;</span> SYSTEM ONLINE // {{ Object.keys(filteredEmails).length }} MESSAGES QUEUED
+                <span v-if="filterDefcon !== null"> // FILTER: DEFCON {{ filterDefcon }}</span>
+            </div>
+        </header>
+
+        <!-- Email List -->
+        <main class="email-list">
+            <div v-if="Object.keys(filteredEmails).length === 0" class="no-emails">
+                <div class="terminal-box">
+                    <p class="terminal-text" v-if="filterDefcon !== null">&gt; NO MESSAGES AT DEFCON {{ filterDefcon }}</p>
+                    <p class="terminal-text" v-else>&gt; NO MESSAGES IN QUEUE</p>
+                    <p class="terminal-hint" v-if="filterDefcon !== null">&gt; CLICK DEFCON {{ filterDefcon }} TO CLEAR FILTER_</p>
+                    <p class="terminal-hint" v-else>&gt; AWAITING DATA FEED_</p>
+                </div>
+            </div>
+
+            <article v-for="(email, id) in filteredEmails" :key="id"
+                     class="email-card"
+                     :class="['defcon-border-' + email.defcon, { expanded: isExpanded(id) }]">
+
+                <!-- Email Header - Always visible, clickable to expand -->
+                <div class="email-header"
+                     :class="'defcon-bg-' + email.defcon"
+                     @click="toggleExpand(id)">
+                    <div class="email-meta">
+                        <span class="email-id">[{{ id }}]</span>
+                        <span class="defcon-badge">DEFCON {{ email.defcon }}</span>
+                        <span class="age-badge" :class="getAgeBadgeClass(email)">
+                            {{ getAgeLabel(email) }}
+                        </span>
+                    </div>
+                    <div class="email-flags">
+                        <span v-if="email.flags.vip" class="flag" title="VIP">[VIP]</span>
+                        <span v-if="email.flags.mip" class="flag" title="MIP">[MIP]</span>
+                        <span v-if="email.flags.reply_immediately" class="flag urgent" title="Sofort antworten">[URGENT]</span>
+                        <span v-if="email.flags.reply_recommended" class="flag reply" title="Antwort empfohlen">[REPLY]</span>
+                        <span v-if="email.flags.information" class="flag info" title="Information">[INFO]</span>
+                        <span v-if="email.flags.may_be_spam" class="flag spam" title="Möglicherweise Spam">[SPAM?]</span>
+                        <span v-if="email.flags.may_be_newsletter" class="flag newsletter" title="Newsletter">[NEWS]</span>
+                    </div>
+                    <div class="expand-indicator">
+                        <span v-if="isExpanded(id)">[&minus;]</span>
+                        <span v-else>[+]</span>
+                    </div>
+                </div>
+
+                <!-- Summary - Always visible -->
+                <div class="email-summary">
+                    <div class="summary-label">&gt; SUMMARY:</div>
+                    <p class="summary-text">{{ email.summary }}</p>
+                    <button class="copy-btn" @click.stop="copyToClipboard(email.summary, $event)" title="Kopieren">
+                        [COPY]
+                    </button>
+                </div>
+
+                <!-- Expandable Content -->
+                <div class="email-details" v-show="isExpanded(id)">
+                    <div v-if="email.de" class="detail-section">
+                        <div class="section-header">&gt; DETAILS:</div>
+                        <p class="detail-text">{{ email.de }}</p>
+                        <button class="copy-btn" @click.stop="copyToClipboard(email.de, $event)" title="Kopieren">
+                            [COPY]
+                        </button>
+                    </div>
+
+                    <!-- Actionable Items -->
+                    <div v-if="email.actionable_items && email.actionable_items.length > 0" class="detail-section">
+                        <div class="section-header">
+                            <span>&gt; ACTION ITEMS:</span>
+                            <button class="copy-all-btn" @click.stop="copyAllActions(email, $event)" title="Alle Aktionen kopieren">
+                                [COPY ALL]
+                            </button>
+                        </div>
+
+                        <div v-for="(category, catIndex) in email.actionable_items" :key="catIndex" class="action-category">
+                            <div class="category-label">// {{ category.category }}</div>
+                            <ul class="action-list">
+                                <li v-for="(item, itemIndex) in category.items" :key="itemIndex" class="action-item">
+                                    <span class="action-marker">&gt;</span>
+                                    <span class="action-text">{{ item }}</span>
+                                    <button class="copy-btn small" @click.stop="copyToClipboard(item, $event)" title="Kopieren">
+                                        [C]
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Draft Reply -->
+                    <div v-if="email.draft_reply" class="detail-section reply-section">
+                        <div class="section-header">&gt; DRAFT RESPONSE:</div>
+                        <div class="reply-content">
+                            <pre>{{ email.draft_reply }}</pre>
+                        </div>
+                        <button class="copy-btn large" @click.stop="copyToClipboard(email.draft_reply, $event)" title="Antwort kopieren">
+                            [COPY RESPONSE]
+                        </button>
+                    </div>
+                </div>
+            </article>
+        </main>
+
+        <!-- Toast notification -->
+        <div class="toast" :class="{ show: toastVisible }">
+            <span class="toast-icon">&gt;</span> {{ toastMessage }}
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <span>ELEPHANT BOY DEFENSE SYSTEM v2.0</span>
+                <span class="separator">//</span>
+                <span>SHALL WE PLAY A GAME?</span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.elephantboy.dashboard" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Elephant Boy</name>
+    <description>Email Dashboard with DEFCON-style priority system</description>
+    <author email="dev@example.com" href="https://example.com">
+        Elephant Boy Team
+    </author>
+    <content src="index.html" />
+
+    <!-- Global Preferences -->
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="Orientation" value="default" />
+    <preference name="BackgroundColor" value="0xff1a1a2e" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="StatusBarBackgroundColor" value="#16213e" />
+    <preference name="StatusBarStyle" value="lightcontent" />
+
+    <!-- iOS Preferences -->
+    <preference name="deployment-target" value="12.0" />
+    <preference name="target-device" value="universal" />
+    <preference name="EnableViewportScale" value="false" />
+    <preference name="MediaPlaybackAllowsAirPlay" value="false" />
+    <preference name="MediaPlaybackRequiresUserAction" value="false" />
+    <preference name="AllowInlineMediaPlayback" value="true" />
+
+    <!-- Android Preferences -->
+    <preference name="android-minSdkVersion" value="24" />
+    <preference name="android-targetSdkVersion" value="34" />
+    <preference name="AndroidLaunchMode" value="singleTop" />
+    <preference name="AndroidPersistentFileLocation" value="Internal" />
+    <preference name="KeepRunning" value="true" />
+    <preference name="LoadUrlTimeoutValue" value="700000" />
+    <preference name="SplashMaintainAspectRatio" value="true" />
+
+    <!-- Allow access -->
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+
+    <!-- iOS specific intents -->
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+
+        <!-- iOS Icons -->
+        <icon src="res/icon/ios/icon-1024.png" width="1024" height="1024" />
+        <icon src="res/icon/ios/icon-180.png" width="180" height="180" />
+        <icon src="res/icon/ios/icon-167.png" width="167" height="167" />
+        <icon src="res/icon/ios/icon-152.png" width="152" height="152" />
+        <icon src="res/icon/ios/icon-120.png" width="120" height="120" />
+        <icon src="res/icon/ios/icon-87.png" width="87" height="87" />
+        <icon src="res/icon/ios/icon-80.png" width="80" height="80" />
+        <icon src="res/icon/ios/icon-76.png" width="76" height="76" />
+        <icon src="res/icon/ios/icon-60.png" width="60" height="60" />
+        <icon src="res/icon/ios/icon-58.png" width="58" height="58" />
+        <icon src="res/icon/ios/icon-40.png" width="40" height="40" />
+        <icon src="res/icon/ios/icon-29.png" width="29" height="29" />
+
+        <!-- iOS Splash Screens -->
+        <splash src="res/screen/ios/Default@2x~universal~anyany.png" />
+    </platform>
+
+    <!-- Android specific intents -->
+    <platform name="android">
+        <allow-intent href="market:*" />
+
+        <!-- Android Icons -->
+        <icon density="ldpi" src="res/icon/android/icon-36-ldpi.png" />
+        <icon density="mdpi" src="res/icon/android/icon-48-mdpi.png" />
+        <icon density="hdpi" src="res/icon/android/icon-72-hdpi.png" />
+        <icon density="xhdpi" src="res/icon/android/icon-96-xhdpi.png" />
+        <icon density="xxhdpi" src="res/icon/android/icon-144-xxhdpi.png" />
+        <icon density="xxxhdpi" src="res/icon/android/icon-192-xxxhdpi.png" />
+
+        <!-- Android Splash Screens -->
+        <splash density="land-ldpi" src="res/screen/android/splash-land-ldpi.png" />
+        <splash density="land-mdpi" src="res/screen/android/splash-land-mdpi.png" />
+        <splash density="land-hdpi" src="res/screen/android/splash-land-hdpi.png" />
+        <splash density="land-xhdpi" src="res/screen/android/splash-land-xhdpi.png" />
+        <splash density="land-xxhdpi" src="res/screen/android/splash-land-xxhdpi.png" />
+        <splash density="land-xxxhdpi" src="res/screen/android/splash-land-xxxhdpi.png" />
+        <splash density="port-ldpi" src="res/screen/android/splash-port-ldpi.png" />
+        <splash density="port-mdpi" src="res/screen/android/splash-port-mdpi.png" />
+        <splash density="port-hdpi" src="res/screen/android/splash-port-hdpi.png" />
+        <splash density="port-xhdpi" src="res/screen/android/splash-port-xhdpi.png" />
+        <splash density="port-xxhdpi" src="res/screen/android/splash-port-xxhdpi.png" />
+        <splash density="port-xxxhdpi" src="res/screen/android/splash-port-xxxhdpi.png" />
+    </platform>
+
+    <!-- Plugins -->
+    <plugin name="cordova-plugin-whitelist" spec="1" />
+    <plugin name="cordova-plugin-statusbar" spec="3" />
+    <plugin name="cordova-plugin-splashscreen" spec="6" />
+    <plugin name="cordova-plugin-clipboard" spec="2" />
+
+    <engine name="ios" spec="^7.0.0" />
+    <engine name="android" spec="^12.0.0" />
+</widget>

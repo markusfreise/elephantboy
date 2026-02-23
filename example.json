@@ -1,0 +1,625 @@
+[
+    {
+        "summary": "Facebook-Benachrichtigung: 3 ungelesene Benachrichtigungen, davon 1 Freundschaftsanfrage",
+        "de": "Facebook informiert über 3 ungelesene Benachrichtigungen. Darunter befindet sich 1 Freundschaftsanfrage und 2 weitere neue Benachrichtigungen. Die E-Mail wurde an mf@designbuero-freise.de gesendet und enthält Links zum Ansehen der Benachrichtigungen sowie zum Abbestellen künftiger E-Mails.",
+        "actionable_items": [
+            {
+                "category": "Social Media",
+                "items": [
+                    "Freundschaftsanfrage auf Facebook prüfen",
+                    "2 weitere Benachrichtigungen auf Facebook ansehen"
+                ]
+            },
+            {
+                "category": "Optional",
+                "items": [
+                    "Facebook-Benachrichtigungs-E-Mails abbestellen, falls nicht gewünscht"
+                ]
+            }
+        ],
+        "flags": {
+            "information": true,
+            "reply_immediately": false,
+            "reply_recommended": false,
+            "may_be_spam": false,
+            "may_be_newsletter": true,
+            "vip": false,
+            "mip": false
+        },
+        "age": -703,
+        "defcon": 1,
+        "draft_reply": "Diese E-Mail ist eine automatische Benachrichtigung von Facebook und erfordert keine Antwort. Bei Bedarf können die Benachrichtigungen direkt auf Facebook.com eingesehen werden."
+    },
+    {
+        "summary": "Zoom Zahlungsbestätigung über 19,03 EUR erfolgreich verarbeitet",
+        "de": "Zoom bestätigt den erfolgreichen Eingang einer Zahlung über 19,03 EUR via PayPal am 04.02.2026 für das Konto 117065299. Die Rechnung und Abonnementbedingungen sind als PDF im Anhang beigefügt. Zoom empfiehlt das Hinzufügen einer sekundären Zahlungsmethode zur Vermeidung zukünftiger Abonnement-Deaktivierungen. Zusätzlich werden Support-Optionen angeboten: Live-Demos mit Produktexperten, kostenlose wöchentliche Schulungswebinare und das Help Center für weitere Unterstützung.",
+        "actionable_items": [
+            {
+                "category": "Optional",
+                "items": [
+                    "Sekundäre Zahlungsmethode hinzufügen",
+                    "PDF-Anhang mit Rechnung und Abonnementbedingungen prüfen"
+                ]
+            }
+        ],
+        "flags": {
+            "information": true,
+            "reply_immediately": false,
+            "reply_recommended": false,
+            "may_be_spam": false,
+            "may_be_newsletter": false,
+            "vip": false,
+            "mip": false
+        },
+        "age": -675,
+        "defcon": 1,
+        "draft_reply": "Sehr geehrtes Zoom-Team,\n\nvielen Dank für die Zahlungsbestätigung. Ich habe die Zahlung über 19,03 EUR zur Kenntnis genommen.\n\nMit freundlichen Grüßen\nMarkus Freise"
+    },
+    {
+        "summary": "E-Mail-Inhalt nicht verfügbar - keine Analyse möglich",
+        "de": "Der E-Mail-Inhalt wurde nicht bereitgestellt. Eine Analyse der Nachricht von service@paypal.de vom 04.02.2026 20:32:04 ist ohne den eigentlichen Nachrichtentext nicht möglich.",
+        "actionable_items": [
+            {
+                "category": "Fehlende Information",
+                "items": [
+                    "E-Mail-Inhalt zur Analyse bereitstellen"
+                ]
+            }
+        ],
+        "flags": {
+            "information": false,
+            "reply_immediately": false,
+            "reply_recommended": false,
+            "may_be_spam": true,
+            "may_be_newsletter": false,
+            "vip": false,
+            "mip": false
+        },
+        "age": -408,
+        "defcon": 1,
+        "draft_reply": "Sehr geehrtes PayPal-Team,\n\nvielen Dank für Ihre Nachricht. Leider konnte ich den Inhalt nicht vollständig einsehen. Könnten Sie mir bitte weitere Details zukommen lassen?\n\nMit freundlichen Grüßen"
+    },
+    {
+        "summary": "Leere E-Mail von Figma-Kommentarsystem",
+        "de": "Dies ist eine automatisch generierte E-Mail vom Figma-Kommentarsystem ohne erkennbaren Inhalt. Die E-Mail enthält keine Nachricht, keine Kommentare und keine verwertbaren Informationen.",
+        "actionable_items": [
+            {
+                "category": "Überprüfung",
+                "items": [
+                    "Figma-Konto auf neue Kommentare prüfen",
+                    "Möglicherweise fehlerhafte Benachrichtigung ignorieren"
+                ]
+            }
+        ],
+        "flags": {
+            "information": false,
+            "reply_immediately": false,
+            "reply_recommended": false,
+            "may_be_spam": false,
+            "may_be_newsletter": false,
+            "vip": false,
+            "mip": false
+        },
+        "age": -431,
+        "defcon": 1,
+        "draft_reply": "Diese E-Mail enthält keinen Inhalt und benötigt keine Antwort. Falls Sie einen Kommentar in Figma hinterlassen haben, überprüfen Sie bitte direkt in der Figma-Anwendung."
+    },
+    {
+        "summary": "Leere E-Mail von Figma-Kommentarsystem",
+        "de": "Diese E-Mail vom Figma-Kommentarsystem enthält keinen sichtbaren Inhalt. Es handelt sich möglicherweise um eine automatisch generierte Benachrichtigung ohne Text oder um eine fehlerhafte Zustellung.",
+        "actionable_items": [
+            {
+                "category": "Überprüfung",
+                "items": [
+                    "Figma-Konto auf neue Kommentare prüfen",
+                    "Bei Bedarf direkt in Figma nachsehen"
+                ]
+            }
+        ],
+        "flags": {
+            "information": true,
+            "reply_immediately": false,
+            "reply_recommended": false,
+            "may_be_spam": false,
+            "may_be_newsletter": false,
+            "vip": false,
+            "mip": false
+        },
+        "age": -369,
+        "defcon": 1,
+        "draft_reply": "Diese E-Mail enthält keinen Inhalt. Falls Sie einen Kommentar in Figma hinterlassen haben, werde ich diesen direkt in der Figma-Anwendung überprüfen."
+    },
+    {
+        "summary": "Slack benachrichtigt über veraltete Mobile-App-Version, die nach dem 18. Mai 2026 nicht mehr unterstützt wird",
+        "de": "Slack informiert darüber, dass die aktuell verwendete Version der Slack Mobile-App nach dem 18. Mai 2026 nicht mehr unterstützt wird. Es wird dringend empfohlen, die App auf die neueste verfügbare Version zu aktualisieren, um Slack weiterhin nutzen zu können. Bei Fragen steht der Support unter feedback@slack.com zur Verfügung. Weitere Informationen zu Systemanforderungen und geplanten Einstellungen sind im Help Center verfügbar.",
+        "actionable_items": [
+            {
+                "category": "Software-Update",
+                "items": [
+                    "Slack Mobile-App auf die neueste Version aktualisieren",
+                    "Systemanforderungen im Help Center überprüfen"
+                ]
+            }
+        ],
+        "flags": {
+            "information": true,
+            "reply_immediately": false,
+            "reply_recommended": false,
+            "may_be_spam": false,
+            "may_be_newsletter": true,
+            "vip": false,
+            "mip": false
+        },
+        "age": -342,
+        "defcon": 1,
+        "draft_reply": "Hallo Slack-Team,\n\nvielen Dank für die Information zur App-Aktualisierung. Ich werde die Slack Mobile-App zeitnah auf die neueste Version aktualisieren.\n\nMit freundlichen Grüßen"
+    },
+    {
+        "summary": "Slack kündigt Ende des Supports für ältere App-Versionen und Betriebssysteme ab 18. Mai 2026 an",
+        "de": "Slack informiert über bevorstehende Änderungen der Systemanforderungen ab 18. Mai 2026. Folgende Versionen werden nicht mehr unterstützt: Slack Desktop-App 4.43.54 und älter, Slack Mobile-App 25.05.10 und älter, sowie ältere Browser-Versionen (Chrome 136, Firefox 138, Edge 135, Safari 18 und älter). Auch verschiedene Betriebssysteme werden nicht mehr unterstützt: Mac OS Monterey 12, Windows 11 Version 22H2 und Ubuntu Focal Fossa 20.4. Betroffene Nutzer können eine Liste aus den Sicherheitseinstellungen exportieren und werden in Slack zur Aktualisierung aufgefordert. Updates müssen vor dem 18. Mai 2026 durchgeführt werden, um Slack weiterhin ohne Unterbrechung nutzen zu können.",
+        "actionable_items": [
+            {
+                "category": "IT-Wartung",
+                "items": [
+                    "Liste der betroffenen Nutzer aus Sicherheitseinstellungen exportieren",
+                    "Slack Desktop-App auf Version höher als 4.43.54 aktualisieren",
+                    "Slack Mobile-App auf Version höher als 25.05.10 aktualisieren",
+                    "Browser-Versionen prüfen und aktualisieren (Chrome >136, Firefox >138, Edge >135, Safari >18)",
+                    "Betriebssysteme prüfen und ggf. upgraden (Mac OS >Monterey 12, Windows 11 >22H2, Ubuntu >20.4)",
+                    "Alle Updates bis spätestens 18. Mai 2026 durchführen"
+                ]
+            },
+            {
+                "category": "Kommunikation",
+                "items": [
+                    "Betroffene Teammitglieder über notwendige Updates informieren",
+                    "IT-Abteilung über die Anforderungen benachrichtigen"
+                ]
+            }
+        ],
+        "flags": {
+            "information": true,
+            "reply_immediately": false,
+            "reply_recommended": false,
+            "may_be_spam": false,
+            "may_be_newsletter": true,
+            "vip": false,
+            "mip": false
+        },
+        "age": -378,
+        "defcon": 1,
+        "draft_reply": "Sehr geehrtes Slack-Team,\n\nvielen Dank für die Information zu den bevorstehenden Änderungen der Systemanforderungen ab Mai 2026. Wir haben die Mitteilung zur Kenntnis genommen und werden die notwendigen Schritte einleiten, um sicherzustellen, dass alle Nutzer in unserer Organisation rechtzeitig auf die unterstützten Versionen aktualisieren.\n\nWir werden die Liste der betroffenen Nutzer aus den Sicherheitseinstellungen exportieren und die erforderlichen Updates koordinieren.\n\nMit freundlichen Grüßen"
+    },
+    {
+        "summary": "Werbe-E-Mail für Hydrotherapie-Ausrüstung über Website-Kontaktformular eingegangen",
+        "de": "Eine E-Mail von Claudio C. (federico.campanelli198@yahoo.com) wurde über das Kontaktformular der GARANT Group Website eingereicht. Der Inhalt bewirbt zwei Hydrotherapie-Systeme: Die 'Fitness Capsule' - eine versiegelte Einzelnutzer-Hydrotherapiekammer mit Frischwasser für jeden Einsatz, konzipiert für postoperative und immungeschwächte Patienten. Das 'modulare Rehabilitationsbecken' für Gruppensitzungen, Gangtraining und Balance-Übungen mit verstellbarem Boden. Die Systeme erfordern keine Bauarbeiten und können in bestehende Räume integriert werden. Enthält einen Link zu weiteren Informationen.",
+        "actionable_items": [
+            {
+                "category": "Spam-Prüfung",
+                "items": [
+                    "Als unerwünschte Werbe-E-Mail über Kontaktformular markieren",
+                    "Kontaktformular-Spam-Schutz überprüfen"
+                ]
+            }
+        ],
+        "flags": {
+            "information": false,
+            "reply_immediately": false,
+            "reply_recommended": false,
+            "may_be_spam": true,
+            "may_be_newsletter": false,
+            "vip": false,
+            "mip": false
+        },
+        "age": -362,
+        "defcon": 1,
+        "draft_reply": "Sehr geehrter Herr C.,\n\nvielen Dank für Ihre Nachricht über unser Kontaktformular.\n\nDie GARANT Group ist im Finanz- und Versicherungsbereich tätig. Ihr Angebot für Hydrotherapie-Ausrüstung passt nicht zu unserem Geschäftsfeld.\n\nBitte nutzen Sie unser Kontaktformular künftig nicht für Werbezwecke.\n\nMit freundlichen Grüßen"
+    },
+    {
+        "summary": "Spam-Kommentar auf HLB-Website wartet auf Moderation - Casino-Werbung",
+        "de": "Ein Spam-Kommentar von 'slot vip casino' (admin@loginslotvip.com) zum Beitrag 'Steuern & Wirtschaft aktuell 5/2020' wartet auf Freigabe. Der Kommentar enthält Casino-Werbung mit Link zu loginslotvip.com. Insgesamt warten 11 Kommentare auf Moderation.",
+        "actionable_items": [
+            {
+                "category": "Website-Moderation",
+                "items": [
+                    "Spam-Kommentar als Spam markieren oder löschen",
+                    "11 wartende Kommentare in Moderationsansicht prüfen",
+                    "Eventuell IP-Adresse 156.245.246.168 blockieren"
+                ]
+            }
+        ],
+        "flags": {
+            "information": true,
+            "reply_immediately": false,
+            "reply_recommended": false,
+            "may_be_spam": true,
+            "may_be_newsletter": false,
+            "vip": true,
+            "mip": false
+        },
+        "age": -672,
+        "defcon": 2,
+        "draft_reply": "Diese E-Mail benötigt keine Antwort, da es sich um eine automatische WordPress-Benachrichtigung über einen Spam-Kommentar handelt. Der Kommentar sollte direkt über die WordPress-Adminoberfläche als Spam markiert werden."
+    },
+    {
+        "summary": "Zahlungsbestätigung von Atlassian für Rechnung IN-EU-002-469-120",
+        "de": "Atlassian bestätigt den Eingang der Zahlung für die Rechnung IN-EU-002-469-120. Die Rechnung wurde als PDF-Anhang zur Verfügung gestellt. Bei Fragen kann der Kundenservice kontaktiert werden.",
+        "actionable_items": [
+            {
+                "category": "Buchhaltung",
+                "items": [
+                    "Zahlungsbestätigung und PDF-Rechnung IN-EU-002-469-120 ablegen",
+                    "Zahlung in Buchhaltungssystem verbuchen"
+                ]
+            }
+        ],
+        "flags": {
+            "information": true,
+            "reply_immediately": false,
+            "reply_recommended": false,
+            "may_be_spam": false,
+            "may_be_newsletter": false,
+            "vip": false,
+            "mip": false
+        },
+        "age": -687,
+        "defcon": 1,
+        "draft_reply": "Guten Tag,\n\nvielen Dank für die Zahlungsbestätigung. Wir haben diese zur Kenntnis genommen und werden die Rechnung ordnungsgemäß in unserer Buchhaltung verbuchen.\n\nMit freundlichen Grüßen\nMarkus Freise"
+    },
+    {
+        "summary": "Keine E-Mail-Inhalte zur Analyse vorhanden",
+        "de": "Es wurden keine E-Mail-Inhalte bereitgestellt. Die E-Mail von mf@designbuero-freise.de vom 05.02.2026 um 06:38:53 Uhr kann nicht analysiert werden, da der eigentliche Nachrichtentext fehlt.",
+        "actionable_items": [
+            {
+                "category": "Allgemein",
+                "items": [
+                    "E-Mail-Inhalt bereitstellen um Analyse durchzuführen"
+                ]
+            }
+        ],
+        "flags": {
+            "information": false,
+            "reply_immediately": false,
+            "reply_recommended": false,
+            "may_be_spam": false,
+            "may_be_newsletter": false,
+            "vip": false,
+            "mip": false
+        },
+        "age": -672,
+        "defcon": 1,
+        "draft_reply": "Sehr geehrte Damen und Herren,\n\nvielen Dank für Ihre E-Mail. Leider konnte ich den Inhalt nicht vollständig erfassen. Könnten Sie Ihr Anliegen bitte nochmals schildern?\n\nMit freundlichen Grüßen"
+    },
+    {
+        "summary": "Keine E-Mail-Inhalte zur Analyse vorhanden",
+        "de": "Es wurden keine E-Mail-Inhalte bereitgestellt. Die Analyse kann nicht durchgeführt werden, da nur Metadaten (Absender und Datum) vorhanden sind.",
+        "actionable_items": [
+            {
+                "category": "Fehlende Informationen",
+                "items": [
+                    "E-Mail-Inhalt zur vollständigen Analyse erforderlich"
+                ]
+            }
+        ],
+        "flags": {
+            "information": false,
+            "reply_immediately": false,
+            "reply_recommended": false,
+            "may_be_spam": false,
+            "may_be_newsletter": false,
+            "vip": false,
+            "mip": false
+        },
+        "age": -666,
+        "defcon": 1,
+        "draft_reply": "Sehr geehrte/r Frau/Herr Freise,\n\nvielen Dank für Ihre E-Mail vom 5. Februar 2026.\n\nMit freundlichen Grüßen"
+    },
+    {
+        "summary": "Asana Tagesübersicht mit 7 fälligen Aufgaben für Donnerstag",
+        "de": "Asana-Benachrichtigung über anstehende Aufgaben für das Projekt freise-design-digital.de. Folgende Aufgaben sind demnächst fällig: Natalie Kutz Fotos, Infrastrukturelles zu Notion migrieren, Website Katrin, Heck Powerpoint, Auftragsanfrage, YoPro Bon Aktion und Kompetenzen für Montagmorgens. Dies ist eine automatische tägliche Zusammenfassung von zugewiesenen Aufgaben und Erwähnungen.",
+        "actionable_items": [
+            {
+                "category": "Projekt-Aufgaben",
+                "items": [
+                    "Natalie Kutz Fotos bearbeiten",
+                    "Infrastrukturelles nach Notion übertragen",
+                    "Website Katrin fertigstellen",
+                    "Heck Powerpoint erstellen",
+                    "Auftragsanfrage bearbeiten",
+                    "YoPro Bon Aktion durchführen",
+                    "Kompetenzen für Montagmorgens vorbereiten"
+                ]
+            },
+            {
+                "category": "Asana prüfen",
+                "items": [
+                    "Fälligkeitsdaten der Aufgaben in Asana überprüfen",
+                    "Prioritäten der 7 Aufgaben festlegen"
+                ]
+            }
+        ],
+        "flags": {
+            "information": true,
+            "reply_immediately": false,
+            "reply_recommended": false,
+            "may_be_spam": false,
+            "may_be_newsletter": true,
+            "vip": false,
+            "mip": false
+        },
+        "age": -667,
+        "defcon": 2,
+        "draft_reply": "Keine Antwort erforderlich - dies ist eine automatische Benachrichtigung von Asana. Bei Bedarf sollten die Aufgaben direkt in Asana bearbeitet werden."
+    },
+    {
+        "summary": "Leere E-Mail von Figma-Kommentarsystem erhalten",
+        "de": "Eine E-Mail vom Figma-Kommentarsystem wurde empfangen, enthält jedoch keinen sichtbaren Inhalt oder Kommentar. Möglicherweise handelt es sich um eine Systembenachrichtigung ohne Text oder eine fehlerhafte Nachricht.",
+        "actionable_items": [
+            {
+                "category": "Prüfung",
+                "items": [
+                    "Figma-Account auf neue Kommentare überprüfen",
+                    "Bei Bedarf Figma direkt im Browser öffnen"
+                ]
+            }
+        ],
+        "flags": {
+            "information": true,
+            "reply_immediately": false,
+            "reply_recommended": false,
+            "may_be_spam": false,
+            "may_be_newsletter": false,
+            "vip": false,
+            "mip": false
+        },
+        "age": -331,
+        "defcon": 1,
+        "draft_reply": "Diese E-Mail erfordert keine Antwort, da sie vom automatischen Figma-Kommentarsystem gesendet wurde und keinen Inhalt enthält. Bei Bedarf sollten Sie direkt in Figma nachsehen, ob dort neue Kommentare vorliegen."
+    },
+    {
+        "summary": "Erinnerung zur Zeiterfassung in Harvest für den 5. Februar 2026",
+        "de": "Dies ist eine automatische Erinnerung von Harvest, dass heute noch keine Zeit erfasst wurde. Die E-Mail enthält einen direkten Link zum Timesheet für den 5. Februar 2026. Harvest ist so konfiguriert, dass täglich um 9:00 Uhr an die Zeiterfassung erinnert wird, wenn noch keine Einträge vorgenommen wurden. Die Benachrichtigungseinstellungen können über den bereitgestellten Link angepasst werden.",
+        "actionable_items": [
+            {
+                "category": "Zeiterfassung",
+                "items": [
+                    "Arbeitszeit für den 5. Februar 2026 in Harvest nachtragen",
+                    "Optional: Benachrichtigungseinstellungen überprüfen und bei Bedarf anpassen"
+                ]
+            }
+        ],
+        "flags": {
+            "information": true,
+            "reply_immediately": false,
+            "reply_recommended": false,
+            "may_be_spam": false,
+            "may_be_newsletter": false,
+            "vip": false,
+            "mip": false
+        },
+        "age": -672,
+        "defcon": 1,
+        "draft_reply": "Diese E-Mail ist eine automatische Systemnachricht und erfordert keine Antwort. Die erforderliche Aktion ist die Zeiterfassung direkt im Harvest-System vorzunehmen."
+    },
+    {
+        "summary": "Anfrage zur Überarbeitung des Wimmelbilds - Logo und Fahne sollen ausgetauscht werden, Kostenvoranschlag gewünscht",
+        "de": "Gloria Bialas vom Kreismuseum Wewelsburg fragt nach der zuvor erwähnten Überarbeitung des Wimmelbilds. Sie möchte wissen, was optimiert werden würde und welche Kosten damit verbunden sind. Auf jeden Fall sollen das Logo und die Fahne ausgetauscht werden.",
+        "actionable_items": [
+            {
+                "category": "Angebot erstellen",
+                "items": [
+                    "Optimierungsmöglichkeiten für das Wimmelbild zusammenstellen",
+                    "Kostenvoranschlag für die Überarbeitung erstellen",
+                    "Austausch von Logo und Fahne kalkulieren"
+                ]
+            },
+            {
+                "category": "Kommunikation",
+                "items": [
+                    "Rücksprache mit Gloria Bialas bezüglich konkreter Wünsche und Umfang"
+                ]
+            }
+        ],
+        "flags": {
+            "information": false,
+            "reply_immediately": false,
+            "reply_recommended": true,
+            "may_be_spam": false,
+            "may_be_newsletter": false,
+            "vip": false,
+            "mip": false
+        },
+        "age": -696,
+        "defcon": 2,
+        "draft_reply": "Hallo Gloria,\n\nvielen Dank für deine Nachricht bezüglich der Überarbeitung des Wimmelbilds.\n\nGerne erstelle ich dir einen detaillierten Vorschlag mit Optimierungsmöglichkeiten und einem Kostenvoranschlag. Den Austausch von Logo und Fahne nehme ich selbstverständlich mit auf.\n\nUm dir ein präzises Angebot zu erstellen, hätte ich vorab noch ein paar Fragen:\n- Gibt es neben Logo und Fahne noch weitere Elemente, die angepasst werden sollen?\n- In welchem Format und welcher Auflösung benötigt ihr das finale Wimmelbild?\n- Gibt es einen gewünschten Zeitrahmen für die Umsetzung?\n\nIch melde mich in den nächsten Tagen mit einem ausführlichen Angebot bei dir.\n\nViele Grüße\nMarkus"
+    },
+    {
+        "summary": "Terminabsprache mit Markus Freise für Freitag 10 Uhr - Pia fragt nach Ort und ob sie etwas mitbringen soll",
+        "de": "Pia bestätigt den Terminvorschlag für Freitag um 10 Uhr und fragt nach dem Ort/Format des Treffens sowie ob sie etwas mitbringen soll. Es geht um ein Feedback-Gespräch, das ursprünglich von Pia initiiert wurde.",
+        "actionable_items": [
+            {
+                "category": "Terminplanung",
+                "items": [
+                    "Ort/Format des Treffens am Freitag 10 Uhr mitteilen",
+                    "Klären ob Pia etwas mitbringen soll"
+                ]
+            }
+        ],
+        "flags": {
+            "information": false,
+            "reply_immediately": true,
+            "reply_recommended": true,
+            "may_be_spam": false,
+            "may_be_newsletter": false,
+            "vip": false,
+            "mip": false
+        },
+        "age": -664,
+        "defcon": 4,
+        "draft_reply": "Hallo Pia,\n\nsuper, dass Freitag 10 Uhr passt! Lass uns bei mir im Büro treffen (Weststraße 48, 33615 Bielefeld). Du brauchst nichts mitzubringen, komm einfach so vorbei.\n\nBis Freitag!\nViele Grüße\nMarkus"
+    },
+    {
+        "summary": "Axel Tiemann informiert über größere Änderungen am Produktseiten-Entwurf, die bis Montagabend überarbeitet werden. Betrifft Produktüberschrift, Mittelteil und CTA-Kasten.",
+        "de": "Axel Tiemann von TIEMANN Schutz-Systeme teilt mit, dass die gestrige Übergabe des ersten Entwurfs zu schnell erfolgte. Er und Markus werden noch größere Änderungen vornehmen, die Auswirkungen auf die Umsetzung haben werden. Da diese Muster-Produktseite die Grundlage für alle weiteren Shops ist, sollen aus neuro-wissenschaftlicher Sicht die richtigen Weichen gestellt werden. Die überarbeitete Version wird spätestens Montagabend zur Verfügung gestellt. Geplante Änderungen: 1) Produktüberschrift kommt über das Bild in linke Spalte mit Herstellerlogo, Typografie in Arbeit. 2) Mittelteil wird überarbeitet mit besserer Gliederung für Anwendung, Vorteile und Normerfüllung. 3) Rechter CTA-Kasten wird farbig unterlegt und komplett im Design und Gliederung überarbeitet.",
+        "actionable_items": [
+            {
+                "category": "Warten auf Zulieferung",
+                "items": [
+                    "Auf überarbeiteten Produktseiten-Entwurf von Axel Tiemann bis Montagabend warten",
+                    "Aktuelle Umsetzung pausieren bis neue Version vorliegt"
+                ]
+            },
+            {
+                "category": "Projektplanung",
+                "items": [
+                    "Zeitplan für Shop-Umsetzung anpassen aufgrund größerer Änderungen",
+                    "Mit Team abstimmen bezüglich Auswirkungen der angekündigten Änderungen"
+                ]
+            }
+        ],
+        "flags": {
+            "information": true,
+            "reply_immediately": false,
+            "reply_recommended": true,
+            "may_be_spam": false,
+            "may_be_newsletter": false,
+            "vip": true,
+            "mip": false
+        },
+        "age": -727,
+        "defcon": 3,
+        "draft_reply": "Hallo Axel,\n\nvielen Dank für die Information. Kein Problem, dass die Übergabe gestern etwas schnell ging - gut, dass ihr die Änderungen jetzt noch vornehmt, bevor wir zu weit in die Umsetzung gehen.\n\nWir werden mit der weiteren Entwicklung warten, bis wir die überarbeitete Version am Montagabend von euch erhalten haben. Das gibt uns auch die Gelegenheit, intern die bestehenden Konzepte nochmal zu überprüfen.\n\nSolltet ihr die finale Version schon früher fertig haben, gerne jederzeit zusenden.\n\nBeste Grüße\nIngo"
+    },
+    {
+        "summary": "Detailliertes Feedback zu Produktseiten-Design mit konkreter Typo-Skala und Optimierungsempfehlungen für B2B-Shop",
+        "de": "Axel Tiemann gibt umfassendes Feedback zur Produktseiten-Gestaltung. Drei Hauptpunkte: 1) TIEMANN-Logo soll über der Produktüberschrift platziert werden (nicht daneben). 2) Mittelteil braucht klare visuelle Struktur mit Überschriften für Anwendung, Vorteile und Normen. 3) Rechte Spalte: Preis größer, Staffelpreise kleiner, CTA-Button optimieren. Anschließend liefert er eine detaillierte Typo-Skala mit konkreten px-Werten: Produktüberschrift 22-24px (600), Abschnittsüberschriften 15-16px (600), Fließtext 14-15px (400), Preis 24-26px (600), CTA 15-16px. Gesamtbewertung sehr positiv - deutlich über Branchenschnitt. Bietet weitere Unterstützung bei Mobile-Typo-Skala, Farbwerten oder Abnahme-Checkliste an.",
+        "actionable_items": [
+            {
+                "category": "Design-Umsetzung",
+                "items": [
+                    "TIEMANN-Logo über Produktüberschrift platzieren (nicht rechts daneben)",
+                    "Mittelspalte mit sichtbaren Überschriften strukturieren (Anwendung, Vorteile, Normen)",
+                    "Rechte Spalte typografisch optimieren: Preis größer, Staffelpreise kleiner/heller",
+                    "CTA-Button Höhe auf 48-52px erhöhen",
+                    "Typo-Skala mit angegebenen px-Werten umsetzen"
+                ]
+            },
+            {
+                "category": "Rückfrage/Entscheidung",
+                "items": [
+                    "Entscheiden ob Mobile-Typo-Skala benötigt wird",
+                    "Klären ob Farbwerte (HEX) für CTA und Grau-Abstufungen gewünscht",
+                    "Prüfen ob finale Abnahme-Checkliste erstellt werden soll"
+                ]
+            }
+        ],
+        "flags": {
+            "information": false,
+            "reply_immediately": false,
+            "reply_recommended": true,
+            "may_be_spam": false,
+            "may_be_newsletter": false,
+            "vip": true,
+            "mip": true
+        },
+        "age": -407,
+        "defcon": 2,
+        "draft_reply": "Hallo Axel,\n\nvielen Dank für dein sehr detailliertes und konstruktives Feedback zur Produktseite. Die klare Struktur deiner Analyse und die konkrete Typo-Skala sind extrem hilfreich für die Umsetzung.\n\nWir werden die drei Hauptpunkte zeitnah mit der Agentur durchgehen:\n- Logo-Position über der Produktüberschrift\n- Strukturierung der Mittelspalte mit sichtbaren Überschriften\n- Typografische Optimierung der rechten Spalte\n\nDie px-Werte können direkt übernommen werden. Sehr gerne würden wir zusätzlich noch die Farbwerte (HEX) für CTA und Grau-Abstufungen sowie die finale Abnahme-Checkliste von dir erhalten. Das würde uns bei der finalen Qualitätssicherung sehr helfen.\n\nMelde mich nach Abstimmung mit der Agentur mit konkretem Zeitplan zurück.\n\nBeste Grüße"
+    },
+    {
+        "summary": "Besorgte Nachfrage von Susanne Esser (milkids Verlag) wegen ausbleibender Rückmeldung zu besprochenen Punkten und Plugin-Aktivitäten",
+        "de": "Susanne Esser vom milkids Verlag zeigt sich irritiert über die fehlende Rückmeldung. Sie bezieht sich auf ein vorheriges Treffen, bei dem verschiedene Punkte besprochen wurden. Sie hat bemerkt, dass die Anzahl der Plugins gestiegen ist und fragt besorgt nach, ob sie sich Sorgen machen muss. Der Ton ist höflich aber deutlich beunruhigt über die ausbleibende Kommunikation.",
+        "actionable_items": [
+            {
+                "category": "Dringende Kommunikation",
+                "items": [
+                    "Umgehend auf E-Mail von Susanne Esser antworten",
+                    "Klärung bezüglich der angesprochenen Punkte aus dem Treffen geben",
+                    "Erklärung zur erhöhten Plugin-Anzahl liefern"
+                ]
+            },
+            {
+                "category": "Kundenbeziehung",
+                "items": [
+                    "Sorgen von milkids Verlag ausräumen",
+                    "Status-Update zu laufenden Arbeiten geben",
+                    "Weiteres Vorgehen abstimmen"
+                ]
+            }
+        ],
+        "flags": {
+            "information": false,
+            "reply_immediately": true,
+            "reply_recommended": true,
+            "may_be_spam": false,
+            "may_be_newsletter": false,
+            "vip": false,
+            "mip": true
+        },
+        "age": -362,
+        "defcon": 5,
+        "draft_reply": "Liebe Frau Esser,\n\nvielen Dank für Ihre Nachricht und entschuldigen Sie bitte die verspätete Rückmeldung. Das war keinesfalls meine Absicht, Sie zu beunruhigen.\n\nZu den bei unserem Treffen besprochenen Punkten und der Plugin-Entwicklung möchte ich Ihnen gerne zeitnah ein ausführliches Update geben. Könnten wir dafür in den nächsten Tagen telefonieren oder uns kurz austauschen?\n\nSie müssen sich keine Sorgen machen - ich melde mich umgehend mit allen Details bei Ihnen.\n\nMit besten Grüßen\nMarkus"
+    },
+    {
+        "summary": "Ingo Kleinemeier bestätigt Erhalt der Nachricht von Axel Tiemann zum Stopp der Produktseiten-Umsetzung und bietet Rückruf an. Namensänderung durch Heirat sowie geplante Abwesenheit werden mitgeteilt.",
+        "de": "Ingo Kleinemeier (ehemals Hillebrand) antwortet auf Axel Tiemanns Anfrage, die Arbeit an der Produktseite zu stoppen, da noch größere Änderungen geplant sind. Er befindet sich in einem Termin und bietet einen späteren Rückruf an. Tiemann hatte mitgeteilt, dass die Produktseiten-Übergabe zu schnell erfolgte und größere Änderungen an Überschrift, Mittelteil und CTA-Kasten notwendig sind. Die überarbeitete Version wird bis Montagabend bereitgestellt. Kleinemeier weist auf seinen neuen Nachnamen durch Heirat hin und teilt seine geplante Abwesenheit vom 25.02. bis 16.03.2026 mit.",
+        "actionable_items": [
+            {
+                "category": "Projekt-Stopp",
+                "items": [
+                    "Arbeit an TIEMANN Produktseite pausieren",
+                    "Auf überarbeitete Version von Axel Tiemann bis Montagabend warten"
+                ]
+            },
+            {
+                "category": "Kommunikation",
+                "items": [
+                    "Ggf. Rückruf bei Axel Tiemann für weitere Abstimmung"
+                ]
+            },
+            {
+                "category": "Planung",
+                "items": [
+                    "Abwesenheit vom 25.02. bis 16.03.2026 berücksichtigen"
+                ]
+            }
+        ],
+        "flags": {
+            "information": true,
+            "reply_immediately": false,
+            "reply_recommended": false,
+            "may_be_spam": false,
+            "may_be_newsletter": false,
+            "vip": true,
+            "mip": false
+        },
+        "age": -316,
+        "defcon": 2,
+        "draft_reply": "Hallo Ingo,\n\nvielen Dank für die schnelle Rückmeldung. Alles klar, wir stoppen die Umsetzung der Produktseite wie besprochen und warten auf die überarbeitete Version bis Montagabend.\n\nEin Rückruf ist aktuell nicht notwendig - wir melden uns, falls noch Fragen aufkommen.\n\nHerzlichen Glückwunsch zur Hochzeit und danke für den Hinweis auf die Namensänderung!\n\nViele Grüße\nAxel"
+    },
+    {
+        "summary": "Pressespiegel von DSC Arminia Bielefeld mit aktuellen Medienberichten",
+        "de": "Malik Schacht von der Kommunikationsabteilung des DSC Arminia Bielefeld versendet einen täglichen Pressespiegel mit Links zu aktuellen Medienberichten über den Verein. Enthalten sind Artikel aus Neue Westfälische (über ehemalige Arminia-Spieler bei neuen Vereinen), Westfalen-Blatt (über Platzwart-Thema), Kicker (anstehende wichtige Spiele) und Lippische Landeszeitung (geplante Partnerschaft mit Horn-Bad Meinberg). Dies ist eine routinemäßige Informationssendung der Vereinskommunikation.",
+        "actionable_items": [
+            {
+                "category": "Information",
+                "items": [
+                    "Pressespiegel zur Kenntnis nehmen",
+                    "Links zu Medienberichten bei Interesse öffnen"
+                ]
+            }
+        ],
+        "flags": {
+            "information": true,
+            "reply_immediately": false,
+            "reply_recommended": false,
+            "may_be_spam": false,
+            "may_be_newsletter": true,
+            "vip": false,
+            "mip": false
+        },
+        "age": -335,
+        "defcon": 1,
+        "draft_reply": "Hallo Herr Schacht,\n\nvielen Dank für den aktuellen Pressespiegel.\n\nMit freundlichen Grüßen"
+    }
+]
