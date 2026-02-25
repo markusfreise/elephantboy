@@ -34,23 +34,23 @@ createApp({
          * Get the highest DEFCON level across all emails
          */
         highestDefcon() {
-            if (Object.keys(this.emails).length === 0) return 1;
+            if (Object.keys(this.emails).length === 0) return 5;
 
-            const defcons = Object.values(this.emails).map(email => email.defcon || 1);
-            return Math.max(...defcons);
+            const defcons = Object.values(this.emails).map(email => email.defcon || 5);
+            return Math.min(...defcons);
         },
 
         /**
          * Get the global status icon based on highest DEFCON and oldest email
          */
         globalStatusIcon() {
-            if (this.highestDefcon >= 4) {
+            if (this.highestDefcon <= 2) {
                 return '☢️'; // Mushroom cloud / nuclear for critical
             }
 
             // Find the oldest non-critical email
             const ages = Object.values(this.emails)
-                .filter(email => email.defcon < 4)
+                .filter(email => email.defcon > 2)
                 .map(email => this.getAgeInDays(email.age));
 
             if (ages.length === 0) return '☢️';
@@ -82,12 +82,12 @@ createApp({
          * Get the global status text
          */
         globalStatusText() {
-            if (this.highestDefcon >= 4) {
+            if (this.highestDefcon <= 2) {
                 return 'KRITISCH - Sofortige Aktion erforderlich!';
             }
 
             const ages = Object.values(this.emails)
-                .filter(email => email.defcon < 4)
+                .filter(email => email.defcon > 2)
                 .map(email => this.getAgeInDays(email.age));
 
             if (ages.length === 0) return 'Kritischer Status';
@@ -155,10 +155,10 @@ createApp({
          * Get age badge CSS class based on email age and defcon
          */
         getAgeBadgeClass(email) {
-            const defcon = email.defcon || 1;
+            const defcon = email.defcon || 5;
 
-            // If DEFCON >= 4, always show critical
-            if (defcon >= 4) {
+            // If DEFCON <= 2, always show critical
+            if (defcon <= 2) {
                 return 'critical';
             }
 
@@ -173,10 +173,10 @@ createApp({
          * Get age icon based on email age and defcon
          */
         getAgeIcon(email) {
-            const defcon = email.defcon || 1;
+            const defcon = email.defcon || 5;
 
-            // If DEFCON >= 4, show mushroom cloud
-            if (defcon >= 4) {
+            // If DEFCON <= 2, show mushroom cloud
+            if (defcon <= 2) {
                 return '☢️';
             }
 
@@ -191,9 +191,9 @@ createApp({
          * Get age label text
          */
         getAgeLabel(email) {
-            const defcon = email.defcon || 1;
+            const defcon = email.defcon || 5;
 
-            if (defcon >= 4) {
+            if (defcon <= 2) {
                 return 'KRITISCH';
             }
 

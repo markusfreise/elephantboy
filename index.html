@@ -39,7 +39,7 @@
             <div class="defcon-bar">
                 <div v-for="level in 5" :key="level"
                      class="defcon-segment"
-                     :class="['defcon-' + level, { active: level <= highestDefcon, selected: filterDefcon === level }]"
+                     :class="['defcon-' + level, { active: level <= (6 - highestDefcon), selected: filterDefcon === level }]"
                      @click="toggleDefconFilter(level)">
                     <span class="segment-label">{{ level }}</span>
                 </div>
