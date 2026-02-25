@@ -5,6 +5,10 @@
 
 const { createApp } = Vue;
 
+const WEBHOOK_URL = 'https://robin.croeso.de/webhook-test/89f8119d-31ef-4e9e-b162-bc5b6e132855';
+const WEBHOOK_AUTH = 'Basic ' + btoa('r0b1n:batMAN7!');
+const POLL_INTERVAL = 2400; // ms
+
 createApp({
     data() {
         const defaultFlags = { vip: false, mip: false, reply_immediately: false, reply_recommended: false, information: false, may_be_spam: false, may_be_newsletter: false };
@@ -18,7 +22,10 @@ createApp({
             toastVisible: false,
             toastMessage: '',
             filterDefcon: null,  // null = show all, 1-5 = filter by level
-            expandedEmails: {}   // track which emails are expanded by id
+            expandedEmails: {},  // track which emails are expanded by id
+            isCrawling: false,
+            _pollInterval: null,
+            _lastDataHash: ''
         };
     },
 
@@ -279,6 +286,98 @@ createApp({
             setTimeout(() => {
                 this.toastVisible = false;
             }, 2000);
+        },
+
+        /**
+         * Manually trigger the n8n webhook (POST)
+         */
+        async triggerCrawl() {
+            this.isCrawling = true;
+            try {
+                const response = await fetch(WEBHOOK_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': WEBHOOK_AUTH,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ trigger: 'manual' })
+                });
+                if (response.ok) {
+                    const data = await response.json().catch(() => null);
+                    if (data) {
+                        this._applyWebhookData(data);
+                        this.showToast('> DATEN EMPFANGEN');
+                    } else {
+                        this.showToast('> CRAWL GESTARTET');
+                    }
+                } else {
+                    this.showToast(`> FEHLER: HTTP ${response.status}`);
+                }
+            } catch (err) {
+                console.warn('Webhook trigger failed:', err);
+                this.showToast('> VERBINDUNGSFEHLER');
+            } finally {
+                this.isCrawling = false;
+            }
+        },
+
+        /**
+         * Background poll: GET webhook every 2.4s, update if data changed
+         */
+        async _pollWebhook() {
+            try {
+                const response = await fetch(WEBHOOK_URL, {
+                    method: 'GET',
+                    headers: { 'Authorization': WEBHOOK_AUTH }
+                });
+                if (!response.ok) return;
+                const data = await response.json().catch(() => null);
+                if (!data) return;
+
+                const hash = JSON.stringify(data);
+                if (hash === this._lastDataHash) return;
+                this._lastDataHash = hash;
+
+                this._applyWebhookData(data);
+                this.showToast('> NEUE DATEN GELADEN');
+            } catch (err) {
+                // silent – network errors in background poll are expected
+            }
+        },
+
+        /**
+         * Parse webhook response and update emails/date
+         */
+        _applyWebhookData(data) {
+            const defaultFlags = { vip: false, mip: false, reply_immediately: false, reply_recommended: false, information: false, may_be_spam: false, may_be_newsletter: false };
+
+            // Detect response shape: plain array, {data:[...]}, {emails:[...]}, or n8n [{json:{...}}]
+            let rawArray = null;
+            let newDate = null;
+
+            if (Array.isArray(data)) {
+                // Could be plain email array or n8n [{json:{...}}] format
+                if (data.length > 0 && data[0] && typeof data[0].json === 'object') {
+                    rawArray = data.map(item => item.json);
+                } else {
+                    rawArray = data;
+                }
+            } else if (data && typeof data === 'object') {
+                rawArray = data.emails || data.data || null;
+                newDate = data.date || data.timestamp || null;
+            }
+
+            if (!rawArray || rawArray.length === 0) return;
+
+            const emails = Object.fromEntries(
+                rawArray.map((email, i) => [
+                    `EMAIL_${String(i + 1).padStart(3, '0')}`,
+                    { ...email, flags: email.flags || defaultFlags }
+                ])
+            );
+
+            this.emails = emails;
+            if (newDate) this.date = newDate;
         }
     },
 
@@ -286,5 +385,16 @@ createApp({
         console.log('Elephant Boy Dashboard initialized');
         console.log(`Loaded ${Object.keys(this.emails).length} emails`);
         console.log(`Highest DEFCON level: ${this.highestDefcon}`);
+
+        // Start background polling
+        this._lastDataHash = JSON.stringify(Object.values(this.emails));
+        this._pollInterval = setInterval(() => this._pollWebhook(), POLL_INTERVAL);
+    },
+
+    unmounted() {
+        if (this._pollInterval) {
+            clearInterval(this._pollInterval);
+            this._pollInterval = null;
+        }
     }
 }).mount('#app');

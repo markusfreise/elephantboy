@@ -10,18 +10,18 @@
     --terminal-amber-glow: rgba(255, 176, 0, 0.4);
 
     /* DEFCON Colors - Terminal style */
-    --defcon-1: #33ff33; /* Green - All Clear */
-    --defcon-2: #33ccff; /* Cyan - Low */
+    --defcon-1: #ff3333; /* Red - NUCLEAR */
+    --defcon-2: #ff9933; /* Orange - Elevated */
     --defcon-3: #ffff33; /* Yellow - Guarded */
-    --defcon-4: #ff9933; /* Orange - Elevated */
-    --defcon-5: #ff3333; /* Red - SEVERE */
+    --defcon-4: #33ccff; /* Cyan - Low */
+    --defcon-5: #33ff33; /* Green - Peace */
 
     /* DEFCON Glow variants */
-    --defcon-1-glow: rgba(51, 255, 51, 0.3);
-    --defcon-2-glow: rgba(51, 204, 255, 0.3);
+    --defcon-1-glow: rgba(255, 51, 51, 0.3);
+    --defcon-2-glow: rgba(255, 153, 51, 0.3);
     --defcon-3-glow: rgba(255, 255, 51, 0.3);
-    --defcon-4-glow: rgba(255, 153, 51, 0.3);
-    --defcon-5-glow: rgba(255, 51, 51, 0.3);
+    --defcon-4-glow: rgba(51, 204, 255, 0.3);
+    --defcon-5-glow: rgba(51, 255, 51, 0.3);
 
     /* Age status colors */
     --fresh: #33ff33;
@@ -47,6 +47,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    font-size: clamp(18px,5vw,24px);
+
 }
 
 body {
@@ -129,11 +134,9 @@ body {
     gap: 1rem;
 }
 
-.logo-icon {
-    font-family: var(--font-terminal);
-    font-size: 1.5rem;
-    color: var(--terminal-green);
-    text-shadow: 0 0 10px var(--terminal-green-glow);
+.logo-icon img {
+    width: 6rem;
+    display: flex;
 }
 
 .logo-text h1 {
@@ -143,6 +146,7 @@ body {
     color: var(--terminal-green);
     text-shadow: 0 0 10px var(--terminal-green-glow);
     letter-spacing: 4px;
+    margin: 0;
 }
 
 .subtitle {
@@ -187,11 +191,11 @@ body {
     animation: pulse-glow 2s ease-in-out infinite;
 }
 
-.status-indicator.status-1 { background: var(--defcon-1); box-shadow: 0 0 10px var(--defcon-1); }
+.status-indicator.status-1 { background: var(--defcon-1); box-shadow: 0 0 10px var(--defcon-1); animation: pulse-critical 0.5s ease-in-out infinite; }
 .status-indicator.status-2 { background: var(--defcon-2); box-shadow: 0 0 10px var(--defcon-2); }
 .status-indicator.status-3 { background: var(--defcon-3); box-shadow: 0 0 10px var(--defcon-3); }
 .status-indicator.status-4 { background: var(--defcon-4); box-shadow: 0 0 10px var(--defcon-4); }
-.status-indicator.status-5 { background: var(--defcon-5); box-shadow: 0 0 10px var(--defcon-5); animation: pulse-critical 0.5s ease-in-out infinite; }
+.status-indicator.status-5 { background: var(--defcon-5); box-shadow: 0 0 10px var(--defcon-5); }
 
 @keyframes pulse-glow {
     0%, 100% { opacity: 1; }
@@ -217,7 +221,7 @@ body {
     text-align: center;
     padding: 0.5rem 0.25rem;
     font-family: var(--font-terminal);
-    font-size: 1.25rem;
+    font-size: 1.24rem;
     border: 1px solid transparent;
     opacity: 0.3;
     transition: all 0.2s ease;
@@ -257,10 +261,39 @@ body {
 .defcon-segment.selected.defcon-4 { background: var(--defcon-4); color: #000; box-shadow: 0 0 25px var(--defcon-4); }
 .defcon-segment.selected.defcon-5 { background: var(--defcon-5); color: #000; box-shadow: 0 0 25px var(--defcon-5); }
 
+/* Crawl Button */
+.crawl-btn {
+    font-family: var(--font-terminal);
+    font-size: 1.2rem;
+    background: transparent;
+    border: 1px solid var(--terminal-green);
+    color: var(--terminal-green);
+    padding: 0.6rem 1.25rem;
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    white-space: nowrap;
+}
+
+.crawl-btn:hover:not(:disabled) {
+    background: rgba(51, 255, 51, 0.1);
+    box-shadow: 0 0 15px var(--terminal-green-glow);
+}
+
+.crawl-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    border-color: var(--terminal-green-dim);
+    color: var(--terminal-green-dim);
+}
+
 /* System Status Bar */
 .system-status {
     font-family: var(--font-terminal);
-    font-size: 1rem;
+    font-size: 1.24rem;
     color: var(--terminal-green);
     text-align: center;
     padding: 0.5rem 1.5rem 0.75rem;
@@ -692,16 +725,16 @@ body {
 }
 
 /* Animation for critical status */
-.header.defcon-5 {
+.header.defcon-1 {
     animation: critical-pulse 1s ease-in-out infinite;
 }
 
 @keyframes critical-pulse {
     0%, 100% {
-        box-shadow: 0 0 20px var(--defcon-5-glow);
+        box-shadow: 0 0 20px var(--defcon-1-glow);
     }
     50% {
-        box-shadow: 0 0 40px var(--defcon-5-glow), 0 0 60px var(--defcon-5-glow);
+        box-shadow: 0 0 40px var(--defcon-1-glow), 0 0 60px var(--defcon-1-glow);
     }
 }
 

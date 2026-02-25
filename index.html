@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: https://unpkg.com https://cdn.jsdelivr.net https://fonts.googleapis.com https://fonts.gstatic.com">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: https://unpkg.com https://cdn.jsdelivr.net https://fonts.googleapis.com https://fonts.gstatic.com; connect-src 'self' https://robin.croeso.de">
     <title>ELEPHANT BOY // WOPR EMAIL SYSTEM</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +20,7 @@
         <header class="header" :class="'defcon-' + highestDefcon">
             <div class="header-content">
                 <div class="logo">
-                    <span class="logo-icon">&#9619;&#9619;&#9619;</span>
+                    <span class="logo-icon"><img src="images/icon.png" alt="Logo"></span>
                     <div class="logo-text">
                         <h1>ELEPHANT BOY</h1>
                         <span class="subtitle">WOPR EMAIL DEFENSE SYSTEM v2.0</span>
@@ -31,6 +31,10 @@
                     <div class="defcon-level">DEFCON {{ highestDefcon }}</div>
                     <div class="status-indicator" :class="'status-' + highestDefcon"></div>
                 </div>
+                <button class="crawl-btn" @click="triggerCrawl" :disabled="isCrawling">
+                    <span :class="{ blink: isCrawling }">&gt;</span>
+                    <span>{{ isCrawling ? 'CRAWLING...' : '[CRAWL]' }}</span>
+                </button>
             </div>
             <div class="defcon-bar">
                 <div v-for="level in 5" :key="level"
@@ -43,7 +47,7 @@
             <div class="system-status">
                 <span class="blink">&gt;</span> SYSTEM ONLINE // {{ Object.keys(filteredEmails).length }} MESSAGES QUEUED
                 <span v-if="filterDefcon !== null"> // FILTER: DEFCON {{ filterDefcon }}</span>
-                <span v-if="date"> // Last checked: {{ date }}</span>
+                <span v-if="date"> // LAST CRAWL: {{ date }}</span>
             </div>
         </header>
 
