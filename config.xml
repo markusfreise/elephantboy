@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.elephantboy.dashboard" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Elephant Boy</name>
-    <description>Email Dashboard with DEFCON-style priority system</description>
+    <description>Let's play a game.'</description>
     <author email="dev@example.com" href="https://example.com">
         Elephant Boy Team
     </author>
